@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanskar Kamlapure - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li class="nav-link active" data-section="home">Home</li>
+      <li class="nav-link" data-section="about">About</li>
+      <li class="nav-link" data-section="education">Education</li>
+      <li class="nav-link" data-section="experience">Experience</li>
+      <li class="nav-link" data-section="skills">Skills</li>
+      <li class="nav-link" data-section="projects">My Projects</li>
+      <li class="nav-link" data-section="contact">Contact</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="section active">
+      <h1>Hello, I'm <span class="highlight">Sanskar Kamlapure</span></h1>
+      <h2><span id="typed-text"></span></h2>
+      <p>Computer Engineer | Developer | Innovator</p>
+      <a href="assets/resume.pdf" class="btn" download>Download CV</a>
+    </section>
+
+    <section id="about" class="section">
+      <h3>About Me</h3>
+      <p>I am a passionate developer eager to build elegant, responsive, and high-performance web apps using modern
+        technologies.</p>
+    </section>
+
+    <section id="education" class="section">
+      <h3>Education</h3>
+      <p><strong>B.E. in Computer Engineering</strong><br>XYZ University, 2021–2025</p>
+    </section>
+
+    <section id="experience" class="section">
+      <h3>Experience</h3>
+      <p><strong>Web Developer Intern</strong><br>ABC Tech Pvt Ltd<br>May 2024 – Aug 2024</p>
+    </section>
+
+    <section id="skills" class="section">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-tag">HTML</div>
+        <div class="skill-tag">CSS</div>
+        <div class="skill-tag">JavaScript</div>
+        <div class="skill-tag">Python</div>
+        <div class="skill-tag">Java</div>
+        <div class="skill-tag">MySQL</div>
+        <div class="skill-tag">PHP</div>
+        <div class="skill-tag">Android</div>
+        <div class="skill-tag">Git</div>
+        <div class="skill-tag">Linux</div>
+        <div class="skill-tag">Bootstrap</div>
+        <div class="skill-tag">React</div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h3>My Projects</h3>
+      <div class="projects-container">
+        <a href="https://github.com/sanskar/hotel-reservation-system" target="_blank" class="project-card">
+          <h4>Hotel Reservation System</h4>
+          <p>Java & MySQL-based system for hotel management with check-in/out and booking features.</p>
+        </a>
+        <a href="https://github.com/sanskar/online-exam-portal" target="_blank" class="project-card">
+          <h4>Online Exam Portal</h4>
+          <p>Android app with PHP-MySQL backend to take MCQ-based exams with login/register modules.</p>
+        </a>
+        <a href="https://github.com/sanskar/windows-antivirus" target="_blank" class="project-card">
+          <h4>Antivirus for Windows</h4>
+          <p>Python-based antivirus with GUI to scan files, quarantine or delete infected files.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> sanskarkamlapure@example.com</p>
+      <p><i class="fas fa-phone"></i> +91 9022674616</p>
+    </section>
+  </div>
+
+  <!-- Social Media Floating Icons -->
+  <div class="social-icons">
+  <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);">
+  </a>
+  <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+  </a>
+  <a href="mailto:youremail@example.com" target="_blank" title="Email">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+  </a>
+</div>
+
+
+
+
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll(".section");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        sections.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(link.dataset.section).classList.add("active");
+      });
+    });
+
+    new Typed("#typed-text", {
+      strings: ["Web Developer", "Java Programmer", "Tech Enthusiast", "Software Engineer"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
