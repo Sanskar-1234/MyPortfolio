@@ -30,6 +30,12 @@ body {
   border-radius: 50px;
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.navbar ul::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar .nav-link {
@@ -41,6 +47,7 @@ body {
   border-radius: 40px;
   transition: background 0.3s, color 0.3s;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .navbar .nav-link:hover,
@@ -203,6 +210,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -214,6 +222,7 @@ body {
     transform: translateX(-100px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -225,15 +234,24 @@ body {
   .navbar ul {
     gap: 20px;
     padding: 8px 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .navbar ul::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar .nav-link {
     font-size: 14px;
     padding: 8px 14px;
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .section {
-    padding: 80px 20px;
+    padding: 40px 20px;
   }
 
   .section h1 {
@@ -280,4 +298,33 @@ body {
 
 .social-icons a:hover img {
   transform: scale(1.2);
+}
+
+/* Removed hamburger menu toggle */
+.menu-toggle {
+  display: none;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-link.animate-in {
+  animation: fadeSlideIn 0.4s ease forwards;
+}
+
+#education {
+  overflow-y: hidden;
+}
+
+#about p {
+  text-align: justify;
 }

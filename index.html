@@ -35,14 +35,27 @@
 
     <section id="about" class="section">
       <h3>About Me</h3>
-      <p>I am a passionate developer eager to build elegant, responsive, and high-performance web apps using modern
-        technologies.</p>
+      <p>
+        I'm a passionate Computer Engineering student from Pune with a strong foundation in Java, Python, and web
+        development. I love building meaningful software—from dynamic websites to practical system utilities. My
+        curiosity drives me to explore new technologies, while my dedication ensures I bring every idea to life with
+        creativity and precision. Whether it's designing user-friendly interfaces or optimizing backend logic, I thrive
+        in turning challenges into real-world solutions.
+      </p>
     </section>
 
     <section id="education" class="section">
-      <h3>Education</h3>
-      <p><strong>B.E. in Computer Engineering</strong><br>XYZ University, 2021–2025</p>
+      <h1>Education</h1>
+      <div class="education-entry">
+        <h2>B.E Computer Engineering</h2>
+        <p><span class="highlight">College:</span> Smt. Kashibai Navale College of Engineering</p>
+        <p><span class="highlight">Institute:</span> Sinhgad Institute</p>
+        <p><span class="highlight">University:</span> Savitribai Phule Pune University</p>
+        <p><span class="highlight">Year of Passing:</span> 2027</p>
+        <p><span class="highlight">CGPA:</span> 8.9</p>
+      </div>
     </section>
+
 
     <section id="experience" class="section">
       <h3>Experience</h3>
@@ -70,46 +83,56 @@
     <section id="projects" class="section">
       <h3>My Projects</h3>
       <div class="projects-container">
-        <a href="https://github.com/sanskar/hotel-reservation-system" target="_blank" class="project-card">
-          <h4>Hotel Reservation System</h4>
-          <p>Java & MySQL-based system for hotel management with check-in/out and booking features.</p>
+        <a href="https://github.com/Sanskar-1234/MyPortfolio/tree/main" target="_blank" class="project-card">
+          <h4>Portfolio</h4>
+          <p>Personal portfolio website built with HTML, CSS showcasing skills and contact info.</p>
         </a>
-        <a href="https://github.com/sanskar/online-exam-portal" target="_blank" class="project-card">
-          <h4>Online Exam Portal</h4>
-          <p>Android app with PHP-MySQL backend to take MCQ-based exams with login/register modules.</p>
+        <a href="https://github.com/Sanskar-1234/employeePayrollSystem" target="_blank" class="project-card">
+          <h4>Employee Payroll System</h4>
+          <p>Java-based payroll management system with employee record handling.</p>
         </a>
-        <a href="https://github.com/sanskar/windows-antivirus" target="_blank" class="project-card">
-          <h4>Antivirus for Windows</h4>
-          <p>Python-based antivirus with GUI to scan files, quarantine or delete infected files.</p>
+        <a href="https://github.com/Sanskar-1234/BoostPatterns" target="_blank" class="project-card">
+          <h4>BoostPatterns</h4>
+          <p>Website built using Django where users can share their ideas with the admin.</p>
         </a>
       </div>
     </section>
 
     <section id="contact" class="section">
       <h3>Contact</h3>
-      <p><i class="fas fa-envelope"></i> sanskarkamlapure@example.com</p>
+      <p><i class="fas fa-envelope"></i> sanskarkamlapure@gmail.com</p>
       <p><i class="fas fa-phone"></i> +91 9022674616</p>
     </section>
   </div>
 
   <!-- Social Media Floating Icons -->
   <div class="social-icons">
-  <a href="https://github.com/yourusername" target="_blank" title="GitHub">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);">
-  </a>
-  <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-  </a>
-  <a href="mailto:youremail@example.com" target="_blank" title="Email">
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
-  </a>
-</div>
-
+    <a href="https://github.com/Sanskar-1234" target="_blank" title="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"
+        style="filter: invert(1);">
+    </a>
+    <a href="https://www.linkedin.com/in/sanskar-kamlapure-3469a9226/" target="_blank" title="LinkedIn">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:sanskarkamlapure@gmail.com" target="_blank" title="Email">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+    </a>
+  </div>
 
 
 
 
   <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    toggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+
+  <script>
+
     const navLinks = document.querySelectorAll(".nav-link");
     const sections = document.querySelectorAll(".section");
 
